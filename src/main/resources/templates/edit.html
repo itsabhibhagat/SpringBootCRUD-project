@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Update Student</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; display: flex; flex-direction: column; align-items: center; padding-top: 50px;">
+
+    <h2 style="color: #333; font-size: 24px; margin-bottom: 20px;">Update Student Information</h2>
+
+    <form th:action="@{'/update/'+${student.htno}}" th:object="${student}" method="post"
+          style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); width: 50%;">
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <td style="padding: 12px; font-weight: bold;">Student Hallticket</td>
+                <td><input type="text" th:field="*{htno}" readonly
+                           style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; background-color: #e9ecef;"></td>
+            </tr>
+
+            <tr>
+                <td style="padding: 12px; font-weight: bold;">Student Name</td>
+                <td><input type="text" th:field="*{name}" 
+                           style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; background-color: #e9ecef;"></td>
+            </tr>
+
+            <tr>
+                <td style="padding: 12px; font-weight: bold;">Student Branch</td>
+                <td><input type="text" th:field="*{branch}" 
+                           style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; background-color: #e9ecef;"></td>
+            </tr>
+
+            <tr>
+                <td style="padding: 12px; font-weight: bold;">Student Email</td>
+                <td><input type="text" th:field="*{email}" 
+                           style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; background-color: #e9ecef;"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Update"
+                           style="width: 100%; padding: 10px; margin-top: 15px; background-color: #5cb85c; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center;">
+<div th:if="${error}"></div>
+    <h1 th:text="${error.htno}" style="color: #d9534f; font-size: 50px; margin-bottom: 10px;">404</h1>
+    <h2 style="color: #333; font-size: 24px; margin-bottom: 20px;">Oops! Page Not Found</h2>
+    <p style="color: #666; font-size: 18px; margin-bottom: 30px;">The page you're looking for doesn't exist or has been moved.</p>
+
+    <a href="/home" style="padding: 12px 20px; background-color: #0275d8; color: white; border-radius: 5px; text-decoration: none; font-size: 18px;">Go to Home Page</a>
+
+</body>
+</html>

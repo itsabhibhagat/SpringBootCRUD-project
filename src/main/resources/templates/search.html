@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Student</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; display: flex; flex-direction: column; align-items: center; padding-top: 50px;">
+
+    <h2 style="color: #333; font-size: 24px; margin-bottom: 20px;">Search Student</h2>
+
+    <form action="/searchStudent" method="GET"
+          style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); width: 50%; text-align: center;">
+        <label for="htno" style="font-size: 18px; font-weight: bold;">Enter Hallticket No:</label>
+        <input type="text" id="htno" name="htno" required
+               style="width: 100%; padding: 10px; margin-top: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+        
+        <input type="submit" value="Search"
+               style="width: 100%; padding: 10px; margin-top: 15px; background-color: #0275d8; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 18px;">
+    </form>
+
+</body>
+</html>

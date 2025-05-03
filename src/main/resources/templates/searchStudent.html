@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Detail</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; display: flex; flex-direction: column; align-items: center; padding-top: 50px;">
+
+    <h2 style="color: #333; font-size: 24px; margin-bottom: 20px;">
+        Student Detail of Student <span th:text="${student.htno}"></span>
+    </h2>
+
+    <div th:if="${student}"
+         style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); width: 50%;">
+        
+        <p style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">
+            ID: <span th:text="${student.htno}" style="font-weight: normal;"></span>
+        </p>
+        <p style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">
+            Name: <span th:text="${student.name}" style="font-weight: normal;"></span>
+        </p>
+        <p style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">
+            Branch: <span th:text="${student.branch}" style="font-weight: normal;"></span>
+        </p>
+        <p style="font-size: 18px; font-weight: bold;">
+            Email: <span th:text="${student.email}" style="font-weight: normal;"></span>
+        </p>
+    </div>
+
+    <p style="margin-top: 20px;">
+        <a href="/search" style="padding: 10px 15px; background-color: #0275d8; color: white; border-radius: 5px; text-decoration: none; font-size: 16px;">Search Again</a>
+    </p>
+	<p style="margin-top: 20px;">
+	        <a href="/home" style="padding: 10px 15px; background-color: #0275d8; color: white; border-radius: 5px; text-decoration: none; font-size: 16px;">Home Page</a>
+	    </p>
+
+</body>
+</html>

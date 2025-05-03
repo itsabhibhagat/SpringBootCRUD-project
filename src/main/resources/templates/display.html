@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    
+    <title>Students Data</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; display: flex; flex-direction: column; align-items: center; padding-top: 50px;">
+
+    <h2 style="color: #333; font-size: 24px; margin-bottom: 20px;">Students Data</h2>
+
+	<p th:text = "${error}"></p>
+    <table style="width: 80%; border-collapse: collapse; background: white; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
+        
+            <tr style="background-color: #0275d8; color: white;">
+                <th style="padding: 12px; border: 1px solid #ddd;">Hallticket No</th>
+                <th style="padding: 12px; border: 1px solid #ddd;">Name</th>
+                <th style="padding: 12px; border: 1px solid #ddd;">Branch</th>
+                <th style="padding: 12px; border: 1px solid #ddd;">Email</th>
+                <th style="padding: 12px; border: 1px solid #ddd;">Actions</th>
+            </tr>
+        
+            <tr th:each="student : ${Students}" style="background-color: #f9f9f9;">
+                <td th:text="${student.htno}" style="padding: 10px; border: 1px solid #ddd;"></td>
+                <td th:text="${student.name}" style="padding: 10px; border: 1px solid #ddd;"></td>
+                <td th:text="${student.branch}" style="padding: 10px; border: 1px solid #ddd;"></td>
+                <td th:text="${student.email}" style="padding: 10px; border: 1px solid #ddd;"></td>
+                <td style="padding: 10px; border: 1px solid #ddd;">
+                    <a th:href="@{'/edit/'+${student.htno}}" style="padding: 8px 12px; background-color: #5cb85c; color: white; border-radius: 5px; text-decoration: none; font-size: 14px; margin-right: 5px;">Edit</a>
+                    <a th:href="@{'/deleteStudent/'+${student.htno}}" style="padding: 8px 12px; background-color: #d9534f; color: white; border-radius: 5px; text-decoration: none; font-size: 14px;">Delete</a>
+                </td>
+            </tr>
+        
+    </table>
+	<form action="/register" style="margin-top: 4%; padding: 8px 12px; background-color: #5cb85c; color: white; border-radius: 5px; text-decoration: none; font-size: 14px; margin-right: 5px;"><button>Add Sudents</button></form>
+	<p style="margin-top: 20px;">
+		        <a href="/home" style="padding: 10px 15px; background-color: #0275d8; color: white; border-radius: 5px; text-decoration: none; font-size: 16px;">Home Page</a>
+		    </p>
+</body>
+</html>
