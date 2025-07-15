@@ -41,13 +41,15 @@ public class StudentController {
 			return "login";
 		}
 	}
+	//minor change
 	
 	@GetMapping("/register")
 	public String register() {
 		return "register";
 	}
 	
-	@PostMapping("/addStudent")
+	// @PostMapping
+	@PostMapping("/addstudents")
 	public String addStudent(
 			@RequestParam("htno")int htno,
 			@RequestParam("name")String name,
